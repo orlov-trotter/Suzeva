@@ -1,0 +1,35 @@
+
+ul{
+	margin:0;
+	padding:0;
+}
+
+li{
+	width:100px;
+	height:50px;
+	float:left;
+	color:#FFFFFF;
+	text-align:center;
+	overflow:hidden;
+	display: block;
+}
+
+#menu{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+p{
+	padding:12px 5px;
+}
+
+	.subtext{
+		padding-top:15px;
+	}
+
+/*Menu Color Classes*/
+.green{background:#6AA63B url('/assets/images/green-item-bg.jpg') top left no-repeat;}
+.yellow{background:#FBC700 url('/assets/images/yellow-item-bg.jpg') top left no-repeat;}
+.red{background:#D52100 url('/assets/images/red-item-bg.jpg') top left no-repeat;}
+.purple{background:#5122B4 url('/assets/images/purple-item-bg.jpg') top left no-repeat;}
+.blue{background:#0292C0 url('/assets/images/blue-item-bg.jpg') top left no-repeat;}
