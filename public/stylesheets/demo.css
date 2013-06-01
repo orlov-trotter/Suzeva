@@ -40,7 +40,9 @@ section, header{
 	display: block;
 }
 /* General Demo Style */
-
+body{
+	background: #e0e3ec url(../images/bg.png) repeat top left;
+}
 
 .clr{
 	clear: both;

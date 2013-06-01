@@ -1,0 +1,90 @@
+@(msg: String)@main(title = "Suzeva"){
+<style>
+<!--
+.heading{
+	color: #66CCFF;
+	font-family: 'Economica',Arial,sans-serif;
+	font-size: 34px;
+	font-weight: 700;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	white-space: nowrap;
+	width: 50%;
+	padding-top: 70px;
+	padding-left: 10%;
+}
+
+.subheading{
+	color: #D80000;
+	font-family: 'Economica',Arial,sans-serif;
+	font-size: 34px;
+	font-weight: 700;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	white-space: nowrap;
+	width: 50%;
+	padding-top: 20px;
+	padding-left: 20%;
+}
+
+.featurette-image{
+	padding-left: 20%;
+	height: 600px;
+}
+
+#contact{
+	padding-top:5%;
+	padding-left: 5%;
+}
+
+-->
+</style>
+
+@if(msg.isEmpty()) {
+	<div id="contact">
+		<h2>Please Submit Following Form:</h2>
+	</div>
+	@helper.form(routes.Application.contact) {
+	<br>
+	<div class="span8">
+		<div class="well">
+			<fieldset id="std-form">
+				<p>
+					<input type="text" id="companyId" name="companyId" placeholder="Company Name" rel="popover" data-content="What company/Organization do you belong to?">
+				</p>
+				<p>
+		            <input type="text" id="name" name="name" placeholder="Full Name" required rel="popover" data-content="Please enter your complete Name">
+		        </p>
+		        <p>
+		            <input type="email" id="email" name="email" placeholder="Email" required value="" rel="popover" data-content="Enter Email Address">
+		        </p>
+		        <p>
+		        	<input type="text" id="phone" name="phone" placeholder="Phone Number" required value="" rel="popover" data-content="Please Enter your Phone Number">
+		        </p>
+		        <p>
+		        	<textarea rows="5" cols="10" id="comment" name="comment" placeholder="Additional Comments" value="" rel="popover" data-content="Please add any additional details"></textarea>
+		        </p>
+		        <p>
+		            <button type="submit" class="btn">Submit</button>
+		        </p>
+			</fieldset>
+		</div>
+	</div>
+	} 
+}else {
+	<div id="contact">
+		<h2>@msg</h2>
+	</div>
+}	
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		// Popover  show
+		$('#std-form input').on('mouseenter', function() {
+			$(this).popover('show')
+		});
+		//Popover hide
+		$('#std-form input').on('mouseleave', function() {
+			$(this).popover('hide')
+		});
+	});
+</script>
+}
